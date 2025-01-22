@@ -2,6 +2,8 @@
 
 A simple command-line number guessing game built with Node.js where players try to guess a randomly generated number between 1 and 100.
 
+Sample solution for the [number-guessing-game](https://roadmap.sh/projects/number-guessing-game) challenge from [roadmap.sh](https://roadmap.sh/).
+
 ## Features
 
 - Three difficulty levels:
@@ -21,7 +23,7 @@ A simple command-line number guessing game built with Node.js where players try 
 
 1. Clone this repository or download the source code:
 ```bash
-git clone <repository-url>
+git clone https://github.com/alexketh/number-guessing-game.git
 ```
 
 2. Navigate to the project directory:

@@ -70,16 +70,37 @@ function playGame(maxAttempts) {
             }
         });
     }
-    
+
     function checkMaxAttempts() {
         if (attempts == maxAttempts) {
             console.log(`Sorry, you have used all ${maxAttempts} attempts. The correct number was ${randNum}.\n`);
-            r1.close();
+            askToReplay();
             return true;
         }
         return false;
     }
 }
+
+function askToReplay() {
+    r1.question("Would you like to play again? (y/n): ", (answer) => {
+        switch(answer.toLowerCase()) {
+            case 'y':
+            case 'yes':
+                console.log("\n----------------------------------------------\n");
+                chooseLevel(); // Start a new game at difficulty selection
+                break;
+            case 'n':
+            case 'no':
+                console.log("Thanks for playing! Goodbye!");
+                r1.close();
+                break;
+            default:
+                console.log("Please enter 'y' for yes or 'n' for no.");
+                askToReplay();
+        }
+    });
+}
+
 
 function easy() {
     levelInfo("easy");
